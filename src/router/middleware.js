@@ -12,7 +12,11 @@ const requireAuth = (register, pathname, navigate) => {
     };
 		
     if (pathname === '/') {
-        navigate('/login');
+        if (isAuthenticated) {
+            navigate('/articles');
+        } else {
+            navigate('/login');
+        };
     };
 };
 
