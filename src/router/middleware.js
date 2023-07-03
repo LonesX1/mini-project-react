@@ -12,7 +12,7 @@ const requireAuth = (register, pathname, navigate) => {
     };
 		
     if (pathname === '/') {
-        throw new Error('Wrong pathname!');
+        navigate('/login');
     };
 };
 
